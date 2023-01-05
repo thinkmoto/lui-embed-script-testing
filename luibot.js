@@ -4,7 +4,10 @@ window.addEventListener('load', function () {
   let hideBubble = localStorage.getItem('lui_hideBubble') || false;
   if (typeof LEX_LUI !== 'undefined') {
     if (typeof LEX_LUI.url !== 'undefined') {
-      const style = document.createTextNode(` 
+      let pathToLui = new URL(
+        LEX_LUI.url.split('/lui/embedded.html?skipIntro=1')[0]
+      );
+      const style = document.createTextNode(`
     #lex-lui {
         display: none;
     }
@@ -39,6 +42,10 @@ window.addEventListener('load', function () {
       .lui-embedded {
           width: 30vw;
       }
+    }
+    @font-face {
+      font-family: 'hlf-lexoffice';
+      src: url('${pathToLui.href}/lui/assets/fonts/lexoffice/hlf-lexoffice.woff');
     }
     .lui-embedded__close {
       cursor: pointer;
@@ -165,6 +172,14 @@ window.addEventListener('load', function () {
       const styles = document.createElement('style');
       styles.appendChild(style);
       head.append(styles);
+      // connecting google fonts
+      const openSansFontLink = document.createElement('link');
+      openSansFontLink.setAttribute('rel', 'stylesheet');
+      openSansFontLink.setAttribute(
+        'href',
+        'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'
+      );
+      head.append(openSansFontLink);
 
       const body = document.getElementsByTagName('body')[0];
 

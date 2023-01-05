@@ -45,7 +45,7 @@ window.addEventListener('load', function () {
     }
     @font-face {
       font-family: 'hlf-lexoffice';
-      src: url('${pathToLui.href}/lui/assets/fonts/lexoffice/hlf-lexoffice.woff');
+      src: url('./lui/assets/fonts/lexoffice/hlf-lexoffice.woff');
     }
     .lui-embedded__close {
       cursor: pointer;

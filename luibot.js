@@ -9,145 +9,157 @@ window.addEventListener('load', function () {
         display: none;
     }
     @media (min-width: 992px) {
-    #lex-lui {
-        bottom: 0;
-        cursor: pointer;
-        display: block;
-        position: fixed;
-        right: 0;
-        width: 130px;
-        z-index: 10;
-    }
+      #lex-lui {
+          bottom: 0;
+          cursor: pointer;
+          display: block;
+          position: fixed;
+          right: 0;
+          width: 130px;
+          z-index: 10;
+      }
     }
     .lui-embedded {
-    background-color: #fff;
-    border-radius: 4px;
-    bottom: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-    height: 80vh;
-    min-width: 550px;
-    overflow: hidden;
-    padding-top: 10px;
-    position: fixed;
-    right: 10px;
-    transition: transform 0.25s ease-out;
-    transform: translateX(120%);
-    width: 50vw;
-    z-index: 150;
+      background-color: #fff;
+      border-radius: 4px;
+      bottom: 10px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+      height: 80vh;
+      min-width: 550px;
+      overflow: hidden;
+      padding-top: 10px;
+      position: fixed;
+      right: 10px;
+      transition: transform 0.25s ease-out;
+      transform: translateX(120%);
+      width: 50vw;
+      z-index: 150;
     }
     @media (min-width: 1280px) {
-    .lui-embedded {
-        width: 30vw;
-    }
+      .lui-embedded {
+          width: 30vw;
+      }
     }
     .lui-embedded__close {
-    cursor: pointer;
-    font-size: 30px;
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    z-index: 10;
+      cursor: pointer;
+      font-size: 30px;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      z-index: 10;
+    }
+    .lex-icon-close:before {
+      content: "H";
+      font-family: "hlf-lexoffice"!important;
+      speak: none;
+      font-style: normal;
+      font-weight: 400;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     .lui-embedded__frame {
-    border: none;
-    height: calc(100% - 30px);
-    left: 0;
-    position: absolute;
-    top: 30px;
-    width: 100%;
+      border: none;
+      height: calc(100% - 30px);
+      left: 0;
+      position: absolute;
+      top: 30px;
+      width: 100%;
     }
     .lui-embedded.show {
-    transform: translateX(0);
+      transform: translateX(0);
     }
   
-          @keyframes bubble {
-            0% {
-                transform: translateY(-3px);
-            }
-            5% {
-                transform: translateY(-2.9px);
-            }
-            45% {
-                transform: translateY(2.9px);
-            }
-            50% {
-                transform: translateY(3px);
-            }
-            55% {
-                transform: translateY(2.9px);
-            }
-            95% {
-                transform: translateY(-2.9px);
-            }
-            100% {
-                transform: translateY(-3px);
-            }
+        @keyframes bubble {
+          0% {
+              transform: translateY(-3px);
+          }
+          5% {
+              transform: translateY(-2.9px);
+          }
+          45% {
+              transform: translateY(2.9px);
+          }
+          50% {
+              transform: translateY(3px);
+          }
+          55% {
+              transform: translateY(2.9px);
+          }
+          95% {
+              transform: translateY(-2.9px);
+          }
+          100% {
+              transform: translateY(-3px);
+          }
         }
   
         .bubble {
-            animation-duration: 4s;
-            animation-iteration-count: infinite;
-            animation-name: bubble;
-            animation-timing-function: linear;
-            cursor: auto;
-            position: absolute;
-            top: -127px;
-            right: 32px;
-            perspective-origin: right;
-            perspective: 946px;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+          animation-name: bubble;
+          animation-timing-function: linear;
+          cursor: auto;
+          position: absolute;
+          top: -127px;
+          right: 32px;
+          perspective-origin: right;
+          perspective: 946px;
         }
   
         .bubble-back-layer {
-            background-color: white;
-            border: solid 1px #E6E6E6;
-            height: 100%;
-            position: absolute;
-            transform: rotateY(21deg) translate(13px, -4px);
-            width: 100%;
-            z-index: 1;
+          background-color: white;
+          border: solid 1px #E6E6E6;
+          height: 100%;
+          position: absolute;
+          transform: rotateY(21deg) translate(13px, -4px);
+          width: 100%;
+          z-index: 1;
         }
   
         .bubble-back-layer::after {
-            bottom: -28px;
-            border-left: 24px solid transparent;
-            border-top: 31px solid white;
-            content: '';
-            display: block;
-            position: absolute;
-            right: 90px;
-            transform: rotate(350deg);
+          bottom: -28px;
+          border-left: 24px solid transparent;
+          border-top: 31px solid white;
+          content: '';
+          display: block;
+          position: absolute;
+          right: 90px;
+          transform: rotate(350deg);
         }
   
         .bubble-text {
-            /* dark-grey */
-            box-sizing: content-box;
-            color: #333333;
-            font-family: 'Open Sans';
-            line-height: 22px;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            position: relative;
-            margin: 0;
-            padding: 38px 30px;
-            width: 311px;
-            z-index: 2;
+          /* dark-grey */
+          box-sizing: content-box;
+          color: #333333;
+          font-family: 'Open Sans';
+          line-height: 22px;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          position: relative;
+          margin: 0;
+          padding: 38px 30px;
+          width: 311px;
+          z-index: 2;
         }
   
         .bubble-close-btn {
-            cursor: pointer;
-            height: 20px;
-            overflow: hidden;
-            position: absolute;
-            right: 16px;
-            top: 14px;
-            width: 20px;
-            z-index: 3;
+          cursor: pointer;
+          height: 20px;
+          overflow: hidden;
+          position: absolute;
+          right: 16px;
+          top: 14px;
+          width: 20px;
+          z-index: 3;
         }
   
         .bubble-close-btn svg {
-            height: 20px;
-            width: 20px;
+          height: 20px;
+          width: 20px;
         }`);
       const head = document.getElementsByTagName('head')[0];
       const styles = document.createElement('style');

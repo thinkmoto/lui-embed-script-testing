@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>X</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Karussell" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Karusell" transform="translate(-1356.000000, -52.000000)" fill="#555555">
+            <g id="X" transform="translate(1355.000000, 51.000000)">
+                <rect id="Rectangle" transform="translate(10.000000, 10.000000) rotate(-45.000000) translate(-10.000000, -10.000000) " x="-2" y="9" width="24" height="2" rx="1"></rect>
+                <rect id="Rectangle" transform="translate(10.000000, 10.000000) rotate(45.000000) translate(-10.000000, -10.000000) " x="-2" y="9" width="24" height="2" rx="1"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

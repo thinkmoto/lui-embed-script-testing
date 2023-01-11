@@ -135,15 +135,28 @@ window.addEventListener('load', function () {
           z-index: 1;
       }
 
-      .bubble-back-layer::after {
-          bottom: -28px;
-          border-left: 24px solid transparent;
-          border-top: 31px solid white;
+      .bubble::after {
+          bottom: -21px;
+          border-left: 22px solid transparent;
+          border-top: 28px solid white;
           content: '';
           display: block;
           position: absolute;
-          right: 90px;
+          right: 91px;
           transform: rotate(350deg);
+          z-index: 2;
+      }
+
+      .bubble::before {
+        bottom: -24px;
+        border-left: 24px solid transparent;
+        border-top: 31px solid #E6E6E6;
+        content: '';
+        display: block;
+        position: absolute;
+        right: 90px;
+        transform: rotate(350deg);
+        z-index: 1;
       }
 
       @font-face{

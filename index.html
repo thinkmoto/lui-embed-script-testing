@@ -4,14 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>Embed Lui test</title>
+    <title>Document</title>
   </head>
   <body>
-    <script type="text/javascript" id="lex-lui-js-extra">
+    <script>
       /* <![CDATA[ */
       var LEX_LUI = {
         url: './lui/embedded.html?skipIntro=1',
@@ -19,14 +15,23 @@
       };
       /* ]]> */
     </script>
-
     <script src="https://app.lexoffice.de/lxo-campaign/lxoCampaign.js"></script>
+    <script type="text/javascript">
+      window.LxoCampaignDefaults = window.LxoCampaignDefaults || {};
+      window.LxoCampaignDefaults.domainCid = '4569';
+
+      //set fixed cid for testing
+      window.LxoCampaignEnforced = window.LxoCampaignEnforced || {};
+      window.LxoCampaignEnforced.cid = '55555555555';
+      window.LxoCampaignEnforced.pid = '';
+      window.LxoCampaignEnforced.pdata = '';
+    </script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.6.10/lottie_light.min.js"
       integrity="sha512-iYOEDH9V3BVUtfTJQdzBkkM+rk5A5Dr8IwHsYjy1YwAVmQOCzK9kx3LjalrGGC7pvwtKLONbsbuQa3HXle7Mmg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="./lui/assets/js/luibot.js"></script>
+    <script src="luibot.js"></script>
   </body>
 </html>
